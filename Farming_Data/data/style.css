@@ -1,0 +1,135 @@
+@font-face {
+    font-family : "university";
+    src : url("font/University.ttf");
+}
+
+*{
+    padding:0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(#b34ef6, #000000);
+    min-height: 100vh;
+}
+
+/* Header */
+
+h1 {
+    float: left;
+    margin-left: 10px;
+    font-family: Bariol;
+    clear: both;
+}
+h1 a {
+    text-decoration: none;
+}
+h1 a:visited {
+    color: black;
+}
+h1 a:hover {
+    color: plum;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+nav img {
+    width: 80px;
+    height: 80px
+}
+
+
+/* MAIN */
+
+main {
+    clear: both;
+    margin-left: 10px;
+    
+}
+
+h3 {
+    padding-top: 90px;
+    font-size: 40px;
+}
+
+/* SVG */
+svg{
+    width:600px;
+    height:800px;
+}
+.svg {
+    float: right;
+    margin-right: 50px;
+    margin-left: 500px;
+    margin-top: -200px;
+    padding-left: 400px;
+}
+#paper {
+    animation-name: paper;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes paper{
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Data */
+
+.ground_humidity h2{
+    font-family: university;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.temperature h2{
+    font-family: university;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.atmosphere_humidity h2{
+    font-family: university;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.data {
+    margin-right: 60px;
+    margin-top: 340px;
+    padding-top: 200px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    
+}
+.data iframe {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    
+}
+
+p {
+    color: white;
+    text-align: center;
+}

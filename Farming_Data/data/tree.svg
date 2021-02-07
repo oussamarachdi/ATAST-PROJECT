@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Farming Data</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1><a href="index.html">Farming Data.</a></h1>
-            <nav>
-                <img src="atast%20logo.jpg">
-            </nav>
-        </header>
-        <main>
-            <h3> WILL YOU <br>BECOME A <br>PERFECT FARMER?</h3>
-            
-        </main>
-        <div class="svg">
-        <svg width="291" height="346" viewBox="0 0 291 346" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="291" height="346" viewBox="0 0 291 346" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="1468294873 1">
 <g id="layer2">
 <g id="g4348">
@@ -96,29 +75,3 @@
 </g>
 </g>
 </svg>
-
-        </div> 
-        <br>
-        <div class="data">
-            <div class="temperature">
-            <h2>Temperature</h2>
-            <iframe width="440" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1270126/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-
-        </div>
-        <div class="ground_humidity">
-            <h2>Ground humidity</h2>
-            <iframe width="440" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1270126/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-
-        </div>
-        <div class="atmosphere_humidity">
-            <h2>Atmosphere humidity</h2>
-            <iframe width="440" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1270126/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-        </div>
-        </div>
-        
-    </body>
-    <hr>
-    <footer>
-        <p>Contact us : <b>email : </b> rachdioussama33@gmail.com ; <b>Phone Number : </b> #########</p>
-    </footer>
-</html>
