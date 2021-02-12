@@ -4,14 +4,14 @@
 #include <ESP8266WebServer.h>
 #include <DHT.h>
 
-#define DHTPIN D2
+#define DHTPIN D0
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
 ESP8266WebServer server(80);
 
-const char* ssid = "WiFi-ssid" ;
-const char* pass = "WiFi-password";
+const char* ssid = "Orange-A4D5" ;
+const char* pass = "M71LHT1G936";
 
 WiFiClient  client;
 
@@ -62,28 +62,16 @@ void loop() {
     Serial.println("\nConnected.");
   }
   // ****** write data on Thingspeak *******
-  // Ground humidity
-  int ground_humidity = ThingSpeak.writeField(myChannelNumber, 1, Ground_H, myWriteAPIKey);
-  if(ground_humidity == 200){
+  ThingSpeak.setField(1, Ground_H);
+  ThingSpeak.setField(2, temp);
+  ThingSpeak.setField(3, Atmosphere_H);
+
+  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+  if(x == 200){
     Serial.println("Channel update successful.");
   }
   else{
-    Serial.println("Problem updating channel. HTTP error code " + String(ground_humidity));
-  }
-  // Temperature
-  int temperature = ThingSpeak.writeField(myChannelNumber, 2, temp, myWriteAPIKey);
-  if(temperature == 200){
-    Serial.println("Channel update successful.");
- }
-  else{
-    Serial.println("Problem updating channel. HTTP error code " + String(temperature));
-  }
-  int atmosphere_humidity = ThingSpeak.writeField(myChannelNumber, 3, Atmosphere_H, myWriteAPIKey);
-  if(atmosphere_humidity == 200){
-    Serial.println("Channel update successful.");
-  }
-  else{
-    Serial.println("Problem updating channel. HTTP error code " + String(atmosphere_humidity));
+    Serial.println("Problem updating channel. HTTP error code " + String(x));
   }
   delay(10000); // delay of 10 seconds beetween each value
 
